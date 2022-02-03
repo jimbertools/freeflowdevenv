@@ -15,3 +15,4 @@ cd mattermost-docker-mysql && cp ../mattermost-team-linux-amd64.tar.gz ./app/
 cd app && docker build -t mattermost-docker-mysql_app . && cd ..
 cd web && docker build -t mattermost-docker-mysql_web . 
 cd ../..
+docker network create proxy
