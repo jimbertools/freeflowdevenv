@@ -1,7 +1,7 @@
 # Freeflow dev environment
 
 ## Gitea
-```
+```bash
 cp gitea/example.env gitea/.env
 # edit .env file if neccesary
 cd gitea && ./build.sh
@@ -9,7 +9,7 @@ docker-compose up --env-file .env
 ```
 
 ## Mattermost
-```
+```bash
 cd mattermost && ./build.sh
 docker-compose up
 ```
