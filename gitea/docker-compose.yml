@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  app:
+    container_name: gitea
+    environment:
+        - POSTGRES_USER=root
+        - POSTGRES_DB=gitea
+        - DB_TYPE=postgres
+        - DB_HOST=localhost:5432
+    volumes:
+        - ./data:/data
+        - ./data/postgres:/var/lib/postgresql/data
+    image: local-gitea
+
+networks:
+  proxy:
+    external: true
