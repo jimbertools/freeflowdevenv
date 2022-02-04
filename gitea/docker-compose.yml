@@ -12,7 +12,8 @@ services:
         - ./data:/data
         - ./data/postgres:/var/lib/postgresql/data
     image: local-gitea
-
+    ports:
+        - 3000:3000
 networks:
   proxy:
     external: true
