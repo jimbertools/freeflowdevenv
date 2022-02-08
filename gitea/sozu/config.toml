@@ -1,0 +1,31 @@
+log_level = "info"
+
+log_target = "stdout"
+
+activate_listeners= true
+command_socket = "./sock"
+
+[[listeners]]
+protocol = "http"
+address = "0.0.0.0:80"
+[applications]
+
+[applications.gitea]
+protocol = "http"
+load_balancing_policy="roundrobin"
+frontends = [
+  { address = "0.0.0.0:80", hostname = "gitea.local" }]
+
+backends = [
+#   { address = "127.0.0.1:80" }
+]
+
+[applications.mattermost]
+protocol = "http"
+load_balancing_policy="roundrobin"
+frontends = [
+  { address = "0.0.0.0:80", hostname = "mattermost.local" }]
+
+backends = [
+#   { address = "127.0.0.1:80" }
+]
