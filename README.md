@@ -33,6 +33,11 @@ docker-compose up
 
 
 ## Sozu (proxy)
+
+#### Install sozu
+`cargo install sozu --vers=0.12.0 --features use-openssl`
+
+#### App configuration
 Add backend ips to the [config.toml](sozu/config.toml).
 *this is also possible in runtime using the sozuctl*
 
