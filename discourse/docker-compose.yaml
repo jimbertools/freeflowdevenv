@@ -12,7 +12,7 @@ services:
         - RAILS_ENV=production  
         - DISCOURSE_HOSTNAME=discourse.staging.jimber.io  
         - DISCOURSE_SMTP_USER_NAME=info@openkyc.live  
-        - DISCOURSE_SMTP_PASSWORD="openKycJimber"  
+        - DISCOURSE_SMTP_PASSWORD="valid smtp password"  #<------------------------
         - DISCOURSE_SMTP_ADDRESS=smtp.gmail.com  
         - DISCOURSE_SMTP_PORT=587  
         - DISCOURSE_DEVELOPER_EMAILS=laurens.druwel@jimber.org  
