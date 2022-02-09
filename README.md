@@ -17,17 +17,18 @@ docker-compose up
 *Remark: Redirect is https, you will need to replace to http on localhost! Works with certificate and reverse proxy.*
 
 ## Discourse
-```cd discourse && ./build.sh```
+```cd discourse && ./build.sh
 
  add discourse.staging.jimber.io to /etc/hosts
-```sudo -- sh -c 127.0.0.1 discourse.staging.jimber.io" >> /etc/hosts```
+sudo -- sh -c 127.0.0.1 discourse.staging.jimber.io" >> /etc/hosts
 **edit DISCOURSE_SMTP_PASSWORD="valid smtp password" in the docker-compose file**
 edit container vars if nessecary in docker-compose file
  
-```vim docker-compose.yaml```
+vim docker-compose.yaml
 start container
-```docker-compose up```
+docker-compose up
 connect to http://discourse.staging.jimber.io
+```
 
 
 
