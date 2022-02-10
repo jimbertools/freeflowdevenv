@@ -51,6 +51,7 @@ services:
       #- MM_CONFIG=/mattermost/config/config.json
     networks:
       - mattermost_net
+      - proxy
 
   web:
     image: mattermost-docker-mysql_web
