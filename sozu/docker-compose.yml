@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  app:
+    container_name: proxy
+    volumes:
+      - ${PWD}:/etc/sozu
+    image: proxy
+    ports:
+      - 80:80
+      - 443:443
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true

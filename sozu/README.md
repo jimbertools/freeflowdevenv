@@ -5,6 +5,8 @@ Forked Sozu repo can be found at: [Jimbertools](https://github.com/jimbertools/s
 Put the correct certs into the certs folder
 
 
+** manual setup required to point to internal ip's of backend services **
+* TODO use dns to proxy services (blocked by toml syntax)
 
 start proxy container 
 docker run -ti --name proxy -p80:80 -p443:443 --volume /home/ldruwel/work/sozutest/:/etc/sozu/ proxy

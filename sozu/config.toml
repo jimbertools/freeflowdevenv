@@ -25,7 +25,8 @@ frontends = [
   { address = "0.0.0.0:80", hostname = "gitea.jimbertesting.be" },
   { address = "0.0.0.0:443", hostname = "gitea.jimbertesting.be", certificate = "/etc/sozu/certs/cert.pem", key = "/etc/sozu/certs/privkey.pem", certificate_chain = "/etc/sozu/certs/fullchain.pem" },
 ]
-# test
+
+## TODO set backend up using docker dns
 backends = [
-  { address = "172.25.0.2:3000" }
+  { address = "172.18.0.2:3000" }
 ]
