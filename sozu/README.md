@@ -7,7 +7,7 @@ Put the correct certs into the certs folder
 build docker image
 docker build -t proxy .
 
-** manual setup required to point to internal ip's of backend services **
+**manual setup required to point to internal ip's of backend services**
 * TODO use dns to proxy services (blocked by sozu syntax)
 
 start proxy container
