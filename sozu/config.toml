@@ -4,28 +4,28 @@ log_target = "stdout"
 
 activate_listeners= true
 command_socket = "./sock"
+saved_state = "./state.json"
+max_connections = 1028
 
 [[listeners]]
 protocol = "http"
 address = "0.0.0.0:80"
-[applications]
 
+[[listeners]]
+protocol = "https"
+address = "0.0.0.0:443"
+
+
+[applications]
 [applications.gitea]
 protocol = "http"
-load_balancing_policy="roundrobin"
+#load_balancing_policy="roundrobin"
+https_redirect = true
 frontends = [
-  { address = "0.0.0.0:80", hostname = "gitea.local" }]
-
-backends = [
-#   { address = "127.0.0.1:80" }
+  { address = "0.0.0.0:80", hostname = "gitea.jimbertesting.be" },
+  { address = "0.0.0.0:443", hostname = "gitea.jimbertesting.be", certificate = "/etc/sozu/certs/cert.pem", key = "/etc/sozu/certs/privkey.pem", certificate_chain = "/etc/sozu/certs/fullchain.pem" },
 ]
-
-[applications.mattermost]
-protocol = "http"
-load_balancing_policy="roundrobin"
-frontends = [
-  { address = "0.0.0.0:80", hostname = "mattermost.local" }]
-
+# test
 backends = [
-#   { address = "127.0.0.1:80" }
+  { address = "172.25.0.2:3000" }
 ]
