@@ -49,7 +49,6 @@ Add backend ips to the sozu/config.toml.
 
 ### Run sozu
 
-
 ```bash
 cd sozu && docker build -t proxy .
 docker-compose up 
