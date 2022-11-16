@@ -1,3 +1,6 @@
+This is an example on projects in docker that are easy to set up and have ThreeFold Connect login included. This was purely meant as POC/Example and is not a running project.
+
+
 # Freeflow dev environment
 
 ## Gitea
